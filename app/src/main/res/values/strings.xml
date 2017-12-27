@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Whatsapp Clone</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="texto_validacao">Validação</string>
+    <string name="info">Você receberá um código SMS para validação, digite o código da validação abaixo:</string>
+    <string name="botao_validar">Validar</string>
 </resources>
