@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context="com.wendergalan.whatsappclone.ValidadorActivity">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -40,7 +39,7 @@
         android:textSize="15dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edit_cod_validacao"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
@@ -52,10 +51,10 @@
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bt_validar"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText5"
+        android:layout_below="@+id/edit_cod_validacao"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:background="@color/colorPrimaryDark"

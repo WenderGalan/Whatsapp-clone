@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.wendergalan.whatsappclone.LoginActivity">
+    tools:context="com.wendergalan.whatsappclone.activity.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_nome"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_below="@+id/imageView"
@@ -28,11 +28,11 @@
         android:textColor="@color/textColorPrimary" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit_cod_pais"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_alignLeft="@+id/edit_nome"
+        android:layout_alignStart="@+id/edit_nome"
         android:layout_centerVertical="true"
         android:ems="10"
         android:hint="+55"
@@ -40,36 +40,36 @@
         android:textColor="@color/textColorPrimary" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="50dp"
+        android:id="@+id/edit_cod_area"
+        android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@+id/editText2"
-        android:layout_toEndOf="@+id/editText2"
-        android:layout_toRightOf="@+id/editText2"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/edit_cod_pais"
+        android:layout_toRightOf="@+id/edit_cod_pais"
         android:ems="10"
         android:hint="11"
         android:inputType="textPersonName"
         android:textColor="@color/textColorPrimary" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edit_telefone"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/edit_nome"
+        android:layout_alignRight="@+id/edit_nome"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/editText3"
-        android:layout_toRightOf="@+id/editText3"
+        android:layout_toEndOf="@+id/edit_cod_area"
+        android:layout_toRightOf="@+id/edit_cod_area"
         android:ems="10"
-        android:hint="981121278"
+        android:hint="98112-1278"
         android:inputType="textPersonName"
         android:textColor="@color/textColorPrimary" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_cadastrar"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/edit_telefone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:background="@color/colorPrimaryDark"
