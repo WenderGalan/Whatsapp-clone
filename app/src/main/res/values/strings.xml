@@ -4,4 +4,12 @@
     <string name="texto_validacao">Validação</string>
     <string name="info">Você receberá um código SMS para validação, digite o código da validação abaixo:</string>
     <string name="botao_validar">Validar</string>
+    <string name="botao_logar">Logar</string>
+    <string name="text_nao_conta">Não tem conta? Cadastre-se!</string>
+    <string name="item_configuracoes">Configurações</string>
+    <string name="item_sair">Sair</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_validador">ValidadorActivity</string>
+    <string name="texto_cadastre">Não tem conta? Cadastre-se</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuarioActivity</string>
 </resources>

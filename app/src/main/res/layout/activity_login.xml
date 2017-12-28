@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:gravity="center_vertical|center_horizontal"
     tools:context="com.wendergalan.whatsappclone.activity.LoginActivity">
 
     <ImageView
@@ -16,64 +17,53 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/edit_nome"
+        android:id="@+id/edit_email_login"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Digite seu nome"
+        android:hint="Digite seu e-mail"
         android:inputType="textPersonName"
         android:textColor="@color/textColorPrimary" />
 
     <EditText
-        android:id="@+id/edit_cod_pais"
-        android:layout_width="50dp"
+        android:id="@+id/edit_senha_login"
+        android:layout_width="370dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/edit_nome"
-        android:layout_alignStart="@+id/edit_nome"
-        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/edit_email_login"
+        android:layout_alignStart="@+id/edit_email_login"
+        android:layout_below="@+id/edit_email_login"
         android:ems="10"
-        android:hint="+55"
-        android:inputType="textPersonName"
-        android:textColor="@color/textColorPrimary" />
-
-    <EditText
-        android:id="@+id/edit_cod_area"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/edit_cod_pais"
-        android:layout_toRightOf="@+id/edit_cod_pais"
-        android:ems="10"
-        android:hint="11"
-        android:inputType="textPersonName"
-        android:textColor="@color/textColorPrimary" />
-
-    <EditText
-        android:id="@+id/edit_telefone"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignEnd="@+id/edit_nome"
-        android:layout_alignRight="@+id/edit_nome"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/edit_cod_area"
-        android:layout_toRightOf="@+id/edit_cod_area"
-        android:ems="10"
-        android:hint="98112-1278"
-        android:inputType="textPersonName"
+        android:hint="Digite sua senha"
+        android:inputType="textPersonName|textPassword"
         android:textColor="@color/textColorPrimary" />
 
     <Button
-        android:id="@+id/bt_cadastrar"
+        android:id="@+id/bt_logar"
         android:layout_width="370dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit_telefone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_alignLeft="@+id/edit_senha_login"
+        android:layout_alignStart="@+id/edit_senha_login"
+        android:layout_below="@+id/edit_senha_login"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/botao_cadastrar"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        android:text="@string/botao_logar"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:theme="@style/botaoPadrao" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bt_logar"
+        android:layout_alignRight="@+id/bt_logar"
+        android:layout_below="@+id/bt_logar"
+        android:layout_marginTop="14dp"
+        android:onClick="abrirCadastroUsuario"
+        android:text="@string/text_nao_conta"
+        android:textColor="@android:color/white"
+        android:textSize="15dp" />
 
 </RelativeLayout>

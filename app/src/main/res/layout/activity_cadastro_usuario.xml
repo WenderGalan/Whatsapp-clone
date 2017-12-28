@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.wendergalan.whatsappclone.activity.CadastroUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="113dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        app:srcCompat="@drawable/usuario" />
+
+    <EditText
+        android:id="@+id/edit_nome"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Digite seu nome"
+        android:inputType="textPersonName"
+        android:textColor="@color/textColorPrimary" />
+
+    <EditText
+        android:id="@+id/edit_senha_login"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_email_login"
+        android:layout_alignStart="@+id/edit_email_login"
+        android:layout_below="@+id/edit_email_login"
+        android:ems="10"
+        android:hint="Digite sua senha"
+        android:inputType="text|textPersonName|textPassword" />
+
+    <EditText
+        android:id="@+id/edit_email_login"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_nome"
+        android:layout_alignStart="@+id/edit_nome"
+        android:layout_below="@+id/edit_nome"
+        android:ems="10"
+        android:hint="Digite seu e-mail"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_senha_login"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/botao_cadastrar"
+        android:textColor="@color/textColorPrimary"
+        android:theme="@style/botaoPadrao"/>
+
+</RelativeLayout>
