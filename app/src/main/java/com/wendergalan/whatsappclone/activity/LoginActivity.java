@@ -15,6 +15,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.wendergalan.whatsappclone.R;
 import com.wendergalan.whatsappclone.config.ConfiguracaoFirebase;
+import com.wendergalan.whatsappclone.helper.Base64Custom;
+import com.wendergalan.whatsappclone.helper.Preferencias;
 import com.wendergalan.whatsappclone.model.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
@@ -55,6 +57,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+
+                    Preferencias preferencias = new Preferencias(LoginActivity.this);
+                    String identificadorUsuarioLogado = Base64Custom.codificarBase64(usuario.getEmail());
+                    preferencias.salvarDados(identificadorUsuarioLogado);
+
                     abrirTelaPrincipal();
                 }else{
                     Toast.makeText(LoginActivity.this, "Erro, não foi possível fazer o login", Toast.LENGTH_LONG ).show();
