@@ -6,12 +6,10 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView3"
+    <ListView
+        android:id="@+id/lv_conversas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="90dp"
-        android:paddingTop="250dp"
-        android:text="Conversas"
-        android:textSize="40dp" />
+        android:divider="@color/cinza"
+        android:dividerHeight="1dp"/>
 </FrameLayout>

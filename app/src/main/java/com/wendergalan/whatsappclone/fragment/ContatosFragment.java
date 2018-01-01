@@ -1,11 +1,13 @@
 package com.wendergalan.whatsappclone.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -14,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.wendergalan.whatsappclone.R;
+import com.wendergalan.whatsappclone.activity.ConversaActivity;
 import com.wendergalan.whatsappclone.adapter.ContatoAdapter;
 import com.wendergalan.whatsappclone.config.ConfiguracaoFirebase;
 import com.wendergalan.whatsappclone.helper.Preferencias;
@@ -99,6 +102,25 @@ public class ContatosFragment extends Fragment {
 
             }
         };
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), ConversaActivity.class);
+
+                //recuperar os dados o usuario
+                Contato contato = contatos.get(i);
+
+                //enviar dados
+                intent.putExtra("nome", contato.getNome());
+                intent.putExtra("email", contato.getEmail());
+
+
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 
